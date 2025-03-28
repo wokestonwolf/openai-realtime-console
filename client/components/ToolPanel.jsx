@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import AudioUploader from "./AudioUploader";
 
 const functionDescription = `
 Call this function when a user asks for a color palette.
@@ -127,6 +128,9 @@ export default function ToolPanel({
         ) : (
           <p>Start the session to use this tool...</p>
         )}
+      </div>
+      <div className="h-full bg-gray-50 rounded-md">
+        <AudioUploader sendClientEvent={sendClientEvent} />
       </div>
     </section>
   );
